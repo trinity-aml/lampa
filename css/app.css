@@ -349,6 +349,7 @@ body.platform--android .wrap__left {
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
+  line-height: 1.2;
 }
 .head__action {
   width: 2.8em;
@@ -976,8 +977,9 @@ body.settings--open .settings__content {
 }
 .card__title {
   font-size: 1.2em;
-  max-height: 3.1em;
+  max-height: 3.6em;
   overflow: hidden;
+  line-height: 1.2;
   -o-text-overflow: ".";
      text-overflow: ".";
   display: -webkit-box;
@@ -1596,6 +1598,9 @@ body.settings--open .settings__content {
 .full-start__button > svg {
   width: 1.5em;
   height: 1.5em;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 .full-start__button > svg + span {
   margin-left: 0.75em;
@@ -2957,6 +2962,9 @@ body.platform--orsay .category-full:after {
     height: 50vh !important;
   }
 }
+.search__results .broadcast__text {
+  margin-top: 2.6em;
+}
 @media screen and (max-width: 767px) {
   .search {
     display: block;
@@ -3007,6 +3015,59 @@ body.platform--orsay .category-full:after {
 }
 .search-history-key + div {
   margin-top: 1em;
+}
+
+.search-history-empty {
+  font-size: 1.3em;
+  color: #747474;
+}
+
+.search-looking {
+  text-align: center;
+}
+.search-looking__text {
+  margin-top: 3.3em;
+  font-size: 1.3em;
+  color: #747474;
+}
+
+body.system--keyboard .search__history {
+  height: 60vh;
+}
+body.system--keyboard .search__history .scroll__content {
+  height: 60vh;
+}
+body.system--keyboard .search__keypad {
+  height: auto;
+  padding-bottom: 2em;
+  margin-top: 0;
+}
+@media screen and (max-width: 767px) {
+  body.system--keyboard .search__left {
+    height: 35vh;
+    min-height: 11em;
+  }
+}
+@media screen and (max-width: 480px) {
+  body.system--keyboard .search__left {
+    height: 25vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  body.system--keyboard .search__results {
+    height: 65vh !important;
+  }
+  body.system--keyboard .search__results > .scroll {
+    height: 65vh !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  body.system--keyboard .search__results {
+    height: 75vh !important;
+  }
+  body.system--keyboard .search__results > .scroll {
+    height: 75vh !important;
+  }
 }
 
 .simple-keyboard {
@@ -3159,6 +3220,23 @@ body.platform--orsay .category-full:after {
   content: "";
   display: block;
   clear: both;
+}
+.simple-keyboard-input {
+  background-color: #4c4b4b;
+  font-size: 1.6em;
+  height: 2.1em;
+  width: 100%;
+  border: 0;
+  padding: 0 0.7em;
+  color: #fff;
+  -webkit-border-radius: 0.3em;
+     -moz-border-radius: 0.3em;
+          border-radius: 0.3em;
+}
+.simple-keyboard-input:focus, .simple-keyboard-input.focus {
+  -webkit-box-shadow: 0 0 0 3px #fff;
+     -moz-box-shadow: 0 0 0 3px #fff;
+          box-shadow: 0 0 0 3px #fff;
 }
 
 .modal {
@@ -4252,6 +4330,9 @@ body.platform--orsay .category-full:after {
 .simple-button > svg + span {
   margin-left: 1em;
 }
+.simple-button > span {
+  margin-top: -0.2em;
+}
 .simple-button.focus {
   background-color: #fff;
   color: #000;
@@ -4321,6 +4402,43 @@ body.platform--orsay .category-full:after {
 }
 .console__line.focus {
   background-color: rgba(255, 255, 255, 0.2);
+}
+.console__tabs .scroll__body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.console__tab {
+  font-size: 1.1em;
+  background-color: #3e3e3e;
+  padding: 0.6em;
+  -webkit-border-radius: 0.3em;
+     -moz-border-radius: 0.3em;
+          border-radius: 0.3em;
+}
+.console__tab + .console__tab {
+  margin-left: 1em;
+}
+.console__tab > span {
+  font-size: 0.7em;
+  background-color: #ddd3;
+  padding: 0.3em;
+  -webkit-border-radius: 0.3em;
+     -moz-border-radius: 0.3em;
+          border-radius: 0.3em;
+  text-align: center;
+  min-width: 1.8em;
+  display: inline-block;
+}
+.console__tab.focus {
+  background: #fff;
+  color: #000;
+}
+.console__time {
+  color: #7c7c7c;
+  font-weight: 300;
 }
 
 .time-line {
